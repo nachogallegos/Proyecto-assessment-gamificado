@@ -61,6 +61,9 @@ def tablero(request):
         'contar_user':contador
     }
     return render(request,'Play/tablero.html',context)
+
+def jugarvideo(request):
+    return render(request,'Play/jugarvideo.html')
 @login_required
 def evaluados(request):
     total_usuarios_quiz = QuizUsuario.objects.all()

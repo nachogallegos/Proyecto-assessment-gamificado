@@ -41,42 +41,23 @@
 
 
 
-    {% if pregunta is None  %}
 
-<div class="container">
-    <div class="jumbotron my-4" >
-        <h1>
-            Ya haz respondido todas las preguntas.
 
-        </h1>
-        <a href="{% url 'HomeUsuario' %}">Volver a Home</a>
-        
-
-    </div>
-     
-</div>
-
-{% else %}
 <div class="container">
     <div class="jumbotron my/4" >
         <h3>
-            {{pregunta.texto}}
+            
             
         </h3>
         
 
-        <form method="POST" class="form">
+       
             {% csrf_token %}
-            <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}" >
+        
 
-            {% for opciones in pregunta.opciones.all %}
-                <p>
-                <input class="form-check-input" type="radio" name="respuesta_pk" value="{{opciones.pk}}" id="choice-{{forloop.counter}}">
-                <label class="form-check-label" for="choice-{{forloop.counter}}" >
-                {{opciones.texto}}
-                </label>
-                </p>
-            {% endfor %}
+           
+              
+            
 
             <video controls class="video" id="videos">
             </video>
@@ -85,7 +66,7 @@
                 File: <input type="file" name="fup" id="fup" /><br>
                 Duration: <input type="text" name="f_du" id="f_du" size="5" /> seconds<br>
                 <input type="submit" value="Upload" />
-              </form>
+            </form>
             <button type="submit" class="btn btn-success" >
                 Enviar
             </button>
@@ -95,8 +76,8 @@
 
 
 
-        </form>
-        <audio id="audio"></audio>
+        
+            <audio id="audio"></audio>
 
     </div>
 
@@ -137,7 +118,7 @@
 
 
 
-{% endif %}
+
 
 
 

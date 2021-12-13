@@ -134,3 +134,4 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "an.luarte@duocuc.cl"
 EMAIL_HOST_PASSWORD = "pythonjava"
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'

@@ -8,7 +8,7 @@ urlpatterns = [
     path('', views.loginView, name="homeAdmin"),
     path('perfil', views.perfil, name="perfil"),
     path('crearquiz', views.tipo_proceso, name="crearquiz"),
-
+    path('jugarvideo',views.jugarvideo, name="jugarvideo"),
     path('registro', views.registro, name="registro"),
     path('registroempresa', views.empresauser, name="registroempresa"),
     path('registroroles', views.roles, name="roles"),
