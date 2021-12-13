@@ -11,4 +11,3 @@ class Question:
         self.answer = answer
 
 
-#hola
