@@ -1,0 +1,38 @@
+{% extends 'base.html' %}} {% block contenido %} {% load crispy_forms_tags %}
+
+
+<div class="card">
+    <div class="card-body">
+        <h2>Agregar Quiz</h2>
+        <hr>
+        <form action="" method="post">
+
+            {% csrf_token %} {{form |crispy}}{{form1 |crispy}}
+            
+            <div class="d-flex justify-content-center">
+               
+                <a href="{% url 'agregarrespuestas' %}">AGREGAR RESPUESTAS</a> &nbsp;&nbsp;&nbsp;
+
+                <a href="{% url 'HomeUsuario' %}">Volver a home</a>
+
+                <input type="submit" value="Guardar" class="btn btn-primary">
+
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+{% endblock contenido %}

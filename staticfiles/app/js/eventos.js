@@ -1,0 +1,1 @@
+var boton = document.querySelector("#boton");

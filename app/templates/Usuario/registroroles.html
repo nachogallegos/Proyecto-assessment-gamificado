@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+
+
+<!--<![endif]-->
+
+<head>
+    {% load crispy_forms_tags %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=""> {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Latest compiled and minified CSS -->
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body class="cuerpo align-items-center">
+
+    <!-- The overlay -->
+
+
+
+
+
+    <div class="container">
+        <div class="jumbotron my/4">
+            <h1 class=" text-center   font-weight-bold " style="color:black "> Asignar Roles a Usuario </h1>
+
+            <form method="POST" class="form">
+
+                {% csrf_token %}  
+                {{ form.as_p }}
+                                
+
+                <button type="submit">
+                    Enviar
+                </button>
+               
+
+
+
+
+
+
+
+            </form>
+
+        </div>
+        <a href="{% url 'evaluados' %}">
+                                <button class="btn-success">
+                                  Volver Atrás
+                              </button>
+                            </a>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
